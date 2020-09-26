@@ -1,6 +1,6 @@
 # Long-Tailed image Classification
 
-This project is built on top of [Decoupling Representation and Classifier for Long-Tailed Recognition (ICLR 2020)](https://github.com/facebookresearch/classifier-balancing). The main body of the proposed Causal-TDE is under [./models/CausalNormClassifier.py](models/CausalNormClassifier.py) and [run_networks.py](run_networks.py) 
+This project is built on top of [Decoupling](https://github.com/facebookresearch/classifier-balancing). The main body of **the proposed [Causal-TDE](https://kaihuatang.github.io/Files/long-tail.pdf)** is under [./models/CausalNormClassifier.py](models/CausalNormClassifier.py) and [run_networks.py](run_networks.py) 
 
 
 ### Training
