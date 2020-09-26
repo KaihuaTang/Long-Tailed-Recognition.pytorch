@@ -62,3 +62,14 @@ python main.py --cfg ./config/CIFAR100_LT/causal_norm.yaml --test --model_dir ./
 ![alt text](imagenet-lt.png "from 'Long-Tailed Classification by Keeping the Good and Removing the Bad Momentum Causal Effect'")
 
 ![alt text](long-tailed-cifar.png "from 'Long-Tailed Classification by Keeping the Good and Removing the Bad Momentum Causal Effect'")
+
+## Citation
+If you find our paper or this project helps your research, please kindly consider citing our paper in your publications.
+```bash
+@inproceedings{tang2020longtailed,
+  title={Long-Tailed Classification by Keeping the Good and Removing the Bad Momentum Causal Effect},
+  author={Tang, Kaihua and Huang, Jianqiang and Zhang, Hanwang},
+  booktitle= {NeurIPS},
+  year={2020}
+}
+```

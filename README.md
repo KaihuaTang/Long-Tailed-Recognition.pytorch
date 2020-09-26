@@ -4,7 +4,7 @@
 [![Python](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/)
 ![PyTorch](https://img.shields.io/badge/pytorch-1.6.0-%237732a8)
 
-This project provides a strong single-stage baseline for Long-Tailed Classification (under ImageNet-LT, Long-Tailed CIFAR-10/-100 datasets), Detection, and Instance Segmentation (under LVIS dataset). It is also a PyTorch implementation of the paper [Long-Tailed Classification by Keeping the Good and Removing the Bad Momentum Causal Effect](), which proposes a general solution to remove the bad momentum causal effect for a variety of Long-Tailed Recognition tasks. The codes are organized into three folders: 
+This project provides a strong single-stage baseline for Long-Tailed Classification (under ImageNet-LT, Long-Tailed CIFAR-10/-100 datasets), Detection, and Instance Segmentation (under LVIS dataset). It is also a PyTorch implementation of the **NeurIPS 2020 paper** [Long-Tailed Classification by Keeping the Good and Removing the Bad Momentum Causal Effect](), which proposes a general solution to remove the bad momentum causal effect for a variety of Long-Tailed Recognition tasks. The codes are organized into three folders: 
 1. The [classification folder](classification) supports long-tailed classification on ImageNet-LT, Long-Tailed CIFAR-10/CIFAR-100 datasets.
 2. The [lvis_old folder (deprecated)](lvis_old) supports long-tailed object detection and instance segmentation on LVIS V0.5 dataset, which is built on top of mmdet V1.1.
 3. The latest version of long-tailed detection and instance segmentation is under [lvis1.0 folder](lvis1.0). Since both LVIS V0.5 and mmdet V1.1 are no longer available on their homepages, we have to re-implement our method on [mmdet V2.4](https://github.com/open-mmlab/mmdetection) using [LVIS V1.0 annotations](https://www.lvisdataset.org/dataset). 
@@ -78,7 +78,13 @@ For long-tailed object detection and instance segmentation, please go to [\[link
 - Most of the existing methods for long-tailed problems are using data distribution to conduct re-sampling or re-weighting during training, which is based on an inappropriate assumption that you can know the future distribution before you start to learn. Meanwhile, the proposed method doesn't need to know the data distribution during training, we only need to use an average feature for inference after we train the model.
 - Our method can be easily transferred to any tasks. We outperform the previous state-of-the-arts [Decoupling](https://arxiv.org/abs/1910.09217), [BBN](https://arxiv.org/abs/1912.02413), [OLTR](https://arxiv.org/abs/1904.05160) in image classification, and we achieve better results than 2019 Winner of LVIS challenge [EQL](https://arxiv.org/abs/2003.05176) in long-tailed object detection and instance segmentation (under the same settings with even fewer GPUs).
 
-
-
-
-
+# Citation
+If you find our paper or this project helps your research, please kindly consider citing our paper in your publications.
+```bash
+@inproceedings{tang2020longtailed,
+  title={Long-Tailed Classification by Keeping the Good and Removing the Bad Momentum Causal Effect},
+  author={Tang, Kaihua and Huang, Jianqiang and Zhang, Hanwang},
+  booktitle= {NeurIPS},
+  year={2020}
+}
+```
