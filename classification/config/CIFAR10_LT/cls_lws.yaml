@@ -1,0 +1,44 @@
+coslr: true
+criterions:
+  PerformanceLoss:
+    def_file: ./loss/SoftmaxLoss.py
+    loss_params: {}
+    optim_params: null
+    weight: 1.0
+endlr: 0.0
+last: false
+memory: {centroids: false, init_centroids: false}
+model_dir: ./logs/CIFAR10_LT/models/resnet32_uniform_e90_ratio100
+networks:
+  classifier:
+    def_file: ./models/TauNormClassifier.py
+    optim_params: {lr: 0.2, momentum: 0.9, weight_decay: 0.0001}
+    scheduler_params: {coslr: true, endlr: 0.0, gamma: 0.1, step_size: 30}
+    params: {dataset: CIFAR10_LT, feat_dim: 128, log_dir: ./logs/CIFAR10_LT/clslearn/lws_uni2ban_ratio100,
+      num_classes: 10, stage1_weights: false}
+  feat_model:
+    def_file: ./models/ResNet32Feature.py
+    fix: true
+    optim_params: {lr: 0.2, momentum: 0.9, weight_decay: 0.0001}
+    scheduler_params: {coslr: true, endlr: 0.0, gamma: 0.1, step_size: 30}
+    params: {dataset: CIFAR10_LT, dropout: null, log_dir: ./logs/CIFAR10_LT/clslearn/lws_uni2ban_ratio100,
+      stage1_weights: false, use_fc: false}
+shuffle: true
+training_opt:
+  backbone: resnet32
+  batch_size: 512
+  dataset: CIFAR10_LT
+  display_step: 10
+  display_grad: False
+  display_grad_step: 10
+  feature_dim: 128
+  log_dir: ./logs/CIFAR10_LT/clslearn/lws_uni2ban_ratio100
+  log_root: ./logs/CIFAR10_LT
+  num_classes: 10
+  cifar_imb_ratio: 0.01   # 0.01, 0.02, 0.1 for 100, 50, 10
+  num_epochs: 5
+  num_workers: 12
+  open_threshold: 0.1
+  sampler: {def_file: ./data/ClassAwareSampler.py, num_samples_cls: 4, type: ClassAwareSampler}
+  stage: lws_uni2ban_ratio100
+  sub_dir: clslearn
