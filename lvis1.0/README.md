@@ -1,6 +1,6 @@
 # Long-Tailed Object Detection and Instance Segmentation
 
-This project is built on top of [mmdetection V2.4](https://github.com/open-mmlab/mmdetection). The main body of **the proposed [Causal-TDE](https://kaihuatang.github.io/Files/long-tail.pdf)** is under [./mmdet/models/roi_heads/bbox_heads/convfc_bbox_head.py](mmdet/models/roi_heads/bbox_heads/convfc_bbox_head.py). 
+This project is built on top of [mmdetection V2.4](https://github.com/open-mmlab/mmdetection). The main body of **[the proposed Causal-TDE](https://kaihuatang.github.io/Files/long-tail.pdf)** is under [./mmdet/models/roi_heads/bbox_heads/convfc_bbox_head.py](mmdet/models/roi_heads/bbox_heads/convfc_bbox_head.py). 
 
 You can check the [documentation](https://mmdetection.readthedocs.io/) for more guidance of using mmdetection, but if you just want to quickly try our method, you can run the following commands.
 
