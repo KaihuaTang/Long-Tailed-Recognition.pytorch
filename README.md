@@ -27,8 +27,8 @@ conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
 pip install pyyaml
 
 # download the project
-git clone https://github.com/KaihuaTang/Long-Tail-Classification.private.git
-cd Long-Tail-Classification.private.git
+git clone https://github.com/KaihuaTang/Long-Tailed-Recognition.pytorch.git
+cd Long-Tailed-Recognition.pytorch
 
 # the following part is only used to build mmdetection 
 cd lvis1.0
