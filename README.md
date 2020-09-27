@@ -24,7 +24,7 @@ The classification part allows the lower version of the following requirements. 
 conda create -n longtail pip python=3.7 -y
 source activate longtail
 conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
-pip install pyyaml
+pip install pyyaml tqdm matplotlib sklearn h5py
 
 # download the project
 git clone https://github.com/KaihuaTang/Long-Tailed-Recognition.pytorch.git

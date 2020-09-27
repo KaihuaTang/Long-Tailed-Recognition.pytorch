@@ -7,10 +7,10 @@ import warnings
 import yaml
 from utils import source_import, update
 
-data_root = {'ImageNet': '/gruntdata5/kaihua/datasets/imagenet/ILSVRC/Data/CLS-LOC',
-             'Places': '/gruntdata2/tkh/datasets/Places/places365_standard',
-             'CIFAR10': '/gruntdata5/kaihua/datasets/CIFAR10',
-             'CIFAR100': '/gruntdata5/kaihua/datasets/CIFAR100',}
+data_root = {'ImageNet': '/data4/imagenet/ILSVRC/Data/CLS-LOC',
+             'Places': '/data4/Places/places365_standard',
+             'CIFAR10': '/data4/CIFAR10',
+             'CIFAR100': '/data4/CIFAR100',}
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--cfg', default=None, type=str)

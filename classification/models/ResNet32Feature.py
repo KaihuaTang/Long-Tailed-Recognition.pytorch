@@ -145,6 +145,9 @@ def create_model(use_fc=False, dropout=None, stage1_weights=False, dataset=None,
     resnet32 = BBN_ResNet_Cifar(BasicBlock, [5, 5, 5])
 
     pretrained_model="/home/kaihua.tkh/projects2/Long-Tail-Classification.private/custom/logs/pretrain/resnet32/final_model_checkpoint.pth"
-    resnet32.load_model(pretrain=pretrained_model)
+    if path.exists(pretrained_model):
+        resnet32.load_model(pretrain=pretrained_model)
+    else:
+        print('WARNING, WARNING: Fail to init model pretrained checkpoints: {}'.format(pretrained_model))
 
     return resnet32
