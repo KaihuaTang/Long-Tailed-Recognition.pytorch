@@ -31,6 +31,8 @@ python main.py --cfg ./config/CIFAR100_LT/causal_norm.yaml
 
 If you want to change any hyper-parameter, you can find them in the corresponding yaml config file. **IMPORTANT: if you just want to change the TDE trade-off parameter alpha, you don't need to re-train the model, you can directly use different alphas during testing, because it's not involved in training**.
 
+To compare our methods with [BBN](https://github.com/Megvii-Nanjing/BBN), we copy their ResNet32 backbone and pretrain an initialization on imagenet as well. The initialization pth file is under ['./data/checkpoints/final_model_checkpoint.pth'](data/checkpoints).
+
 ### Testing
 For ImageNet_LT: 
 ```bash

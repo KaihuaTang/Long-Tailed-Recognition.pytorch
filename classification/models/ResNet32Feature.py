@@ -144,9 +144,10 @@ def create_model(use_fc=False, dropout=None, stage1_weights=False, dataset=None,
     print('Loading Scratch ResNet 50 Feature Model.')
     resnet32 = BBN_ResNet_Cifar(BasicBlock, [5, 5, 5])
 
-    pretrained_model="/home/kaihua.tkh/projects2/Long-Tail-Classification.private/custom/logs/pretrain/resnet32/final_model_checkpoint.pth"
+    pretrained_model="./data/checkpoints/final_model_checkpoint.pth"
     if path.exists(pretrained_model):
         resnet32.load_model(pretrain=pretrained_model)
+        print('===> Load Initialization for ResNet32')
     else:
         print('========== WARNING, WARNING ==========')
         print('Fail to init model with pretrained checkpoints: {}'.format(pretrained_model))
