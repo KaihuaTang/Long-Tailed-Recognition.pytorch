@@ -148,6 +148,6 @@ def create_model(use_fc=False, dropout=None, stage1_weights=False, dataset=None,
     if path.exists(pretrained_model):
         resnet32.load_model(pretrain=pretrained_model)
     else:
-        print('WARNING, WARNING: Fail to init model pretrained checkpoints: {}'.format(pretrained_model))
+        print('WARNING, WARNING: Fail to init model with pretrained checkpoints: {}'.format(pretrained_model))
 
     return resnet32
