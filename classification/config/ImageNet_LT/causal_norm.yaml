@@ -32,7 +32,7 @@ training_opt:
   display_grad: False
   display_grad_step: 10
   feature_dim: 2048
-  log_dir: ./logs/ImageNet_LT/models/resnext50_e90_causal_norm_classifier_head2_strange_norm_k1
+  log_dir: ./logs/ImageNet_LT/models/resnext50_e90_causal_norm_classifier_head2
   log_root: /logs/ImageNet_LT
   num_classes: 1000
   num_epochs: 90
