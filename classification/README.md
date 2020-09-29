@@ -29,7 +29,7 @@ For Long-Tailed CIFAR-100 using ResNext50:
 python main.py --cfg ./config/CIFAR100_LT/causal_norm.yaml
 ```
 
-If you want to change any hyper-parameter, you can find them in the corresponding yaml config file. **IMPORTANT: if you just want to change the TDE trade-off parameter alpha, you don't need to re-train the model, you can directly use different alphas during testing, because it's not involved in training**.
+If you want to change any hyper-parameter, you can find them in the corresponding yaml config file. **IMPORTANT: if you just want to change the TDE trade-off parameter alpha, you don't need to re-train the model, you can directly use different alphas during testing, because it's not involved in training. I also have a useful trick to pick up alpha: when you are testing on a dataset without additional val set (or directly testing on val set), you can choose the alpha that makes alpha times cos approximate to 1.0 in average.**.
 
 For Long-Tailed CIFAR-10/-100, if you want to change the imbalance ratio, you can set "cifar_imb_ratio" in the corresponding yaml file, e.g., cifar_imb_ratio=0.01/0.02/0.1 means imbalance ratio = 100, 50, 10 in the paper.
 
