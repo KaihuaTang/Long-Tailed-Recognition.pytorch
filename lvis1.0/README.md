@@ -10,7 +10,7 @@ You can check the [documentation](https://mmdetection.readthedocs.io/) for more 
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 PORT=112222 bash ./tools/dist_train.sh configs/htc/htc_r101_fpn_20e_causal.py 8 --work-dir work_dirs/htc_r101_fpn_20e_causal --no-validate
 ```
 
-The hyper-parameters of the proposed TDE are actually in convfc_bbox_head.py rather than the config file. Note that using --no-validate will save lots of time, because LVIS V1.0 has a much larger validation set.
+The hyper-parameters of the proposed TDE are actually in convfc_bbox_head.py rather than the config file. Note that using --no-validate will save lots of time, because LVIS V1.0 has a much larger validation set. **IMPORTANT: if you just want to change the TDE trade-off parameter alpha, you don't need to re-train the model, you can directly use different alphas during testing, because it's not involved in training**.
 
 
 ### Testing
