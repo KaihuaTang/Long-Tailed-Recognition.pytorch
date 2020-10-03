@@ -16,7 +16,7 @@ networks:
     def_file: ./models/CausalNormClassifier.py
     optim_params: {lr: 0.2, momentum: 0.9, weight_decay: 0.0005}
     scheduler_params: {coslr: false, endlr: 0.0, gamma: 0.1, step_size: 30, warmup: true, lr_step: [120, 160], lr_factor: 0.01, warm_epoch: 5}
-    params: {dataset: CIFAR100_LT, feat_dim: 128, num_classes: 100, stage1_weights: false, use_effect: true, num_head: 2, tau: 16.0, alpha: 2.0, gamma: 0.03125}
+    params: {dataset: CIFAR100_LT, feat_dim: 128, num_classes: 100, stage1_weights: false, use_effect: true, num_head: 2, tau: 16.0, alpha: 1.5, gamma: 0.03125}
   feat_model:
     def_file: ./models/ResNet32Feature.py
     fix: false
