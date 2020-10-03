@@ -170,6 +170,10 @@ class model ():
                 print("===> Module {} : Using coslr eta_min={}".format(key, scheduler_params['endlr']))
                 self.model_scheduler_dict[key] = torch.optim.lr_scheduler.CosineAnnealingLR(
                                     optimizer, self.training_opt['num_epochs'], eta_min=scheduler_params['endlr'])
+            elif scheduler_params['warmup']:
+                print("===> Module {} : Using warmup".format(key))
+                self.model_scheduler_dict[key] = WarmupMultiStepLR(optimizer, scheduler_params['lr_step'], 
+                                                    gamma=scheduler_params['lr_factor'], warmup_epochs=scheduler_params['warm_epoch'])
             else:
                 self.model_scheduler_dict[key] = optim.lr_scheduler.StepLR(optimizer,
                                                                                     step_size=scheduler_params['step_size'],
