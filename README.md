@@ -8,6 +8,8 @@ This project provides a strong single-stage baseline for Long-Tailed Classificat
 2. The [lvis_old folder (deprecated)](lvis_old) supports long-tailed object detection and instance segmentation on LVIS V0.5 dataset, which is built on top of mmdet V1.1.
 3. The latest version of long-tailed detection and instance segmentation is under [lvis1.0 folder](lvis1.0). Since both LVIS V0.5 and mmdet V1.1 are no longer available on their homepages, we have to re-implement our method on [mmdet V2.4](https://github.com/open-mmlab/mmdetection) using [LVIS V1.0 annotations](https://www.lvisdataset.org/dataset). 
 
+# Slides
+If you want to present our work in your group meeting / introduce it to your friends / seek answers for some ambiguous parts in the paper, feel free to use our slides. It has two versions: [one-hour full version](https://github.com/KaihuaTang/Long-Tailed-Recognition.pytorch/blob/master/NeurIPS%202020%20Presentation%20-%20Full%20(1hr).pptx) and [five-minute short version](https://github.com/KaihuaTang/Long-Tailed-Recognition.pytorch/blob/master/NeurIPS%202020%20Presentation%20-%20Short%20(5min).pptx).
 
 # Installation
 The classification part allows the lower version of the following requirements. However, in detection and instance segmentation (mmdet V2.4), I tested some lower versions of python and pytorch, which are all failed. If you want to try other environments, please check the updates of [mmdetection](https://github.com/open-mmlab/mmdetection).
