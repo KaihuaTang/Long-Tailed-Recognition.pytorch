@@ -11,6 +11,9 @@ This project provides a strong single-stage baseline for Long-Tailed Classificat
 # Slides
 If you want to present our work in your group meeting / introduce it to your friends / seek answers for some ambiguous parts in the paper, feel free to use our slides. It has two versions: [one-hour full version](https://github.com/KaihuaTang/Long-Tailed-Recognition.pytorch/blob/master/NeurIPS%202020%20Presentation%20-%20Full%20(1hr).pptx) and [five-minute short version](https://github.com/KaihuaTang/Long-Tailed-Recognition.pytorch/blob/master/NeurIPS%202020%20Presentation%20-%20Short%20(5min).pptx).
 
+# New Long-tailed Settings
+If you are interested in a more general long-tailed classification setting that considers both class-wise (inter-class) imbalance and attribute-wise (intra-class) imbalance, please refer to our **ECCV 2022** paper [Invariant Feature Learning for Generalized Long-Tailed Classification](https://arxiv.org/abs/2207.09504) and corresponding [project](https://github.com/KaihuaTang/Generalized-Long-Tailed-Benchmarks.pytorch).
+
 # Installation
 The classification part allows the lower version of the following requirements. However, in detection and instance segmentation (mmdet V2.4), I tested some lower versions of python and pytorch, which are all failed. If you want to try other environments, please check the updates of [mmdetection](https://github.com/open-mmlab/mmdetection).
 
